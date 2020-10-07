@@ -44,7 +44,10 @@
 <script>
 export default {
     props: {
-        games: []
+        games: {
+            type: Array,
+            required: true
+        }
     },
     methods: {
         roundVal(num) {
