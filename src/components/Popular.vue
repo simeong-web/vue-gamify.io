@@ -30,7 +30,7 @@
                         <span class="text-secondary-light">{{ game.rating }}</span>
                     </div>
                     <div class="primary-button-wrapper mb-4">
-                        <router-link :to="`/games/${game.id}`"><a class="bg-secondary py-2 px-4 rounded">Play!</a></router-link>
+                        <router-link :to="`/game/${game.id}`"><a class="bg-secondary py-2 px-4 rounded">Play!</a></router-link>
                     </div>
                 </div>
             </div>
