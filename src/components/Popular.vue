@@ -1,7 +1,7 @@
 <template>
     <div id="popular" class="container xl mx-auto my-6">
         <div class="my-6 flex justify-center">
-            <h2 class="text-3xl">Game Your Way!</h2>
+            <h2 class="text-3xl text-default">Game Your Way!</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
             <div class="landing-card">
@@ -18,10 +18,10 @@
             </div>
         </div>
         <div class="site-section-heading">
-            <h2 class="text-2xl">Most Popular</h2>
+            <h2 class="text-2xl text-default">Most Popular</h2>
         </div>
         <div class="popular-card-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
-            <div class="primary-card" v-for="game in games" :key="`${game.id}`">
+            <div class="primary-card text-default" v-for="game in games" :key="`${game.id}`">
                 <a href="/"><img :src="`${game.src}`" alt="game-card" class="max-w-full"></a>
                 <div class="primary-card-content">
                     <h3 class="primary-game-title mt-3">{{ game.title }}</h3>
@@ -30,7 +30,7 @@
                         <span class="text-secondary-light">{{ game.rating }}</span>
                     </div>
                     <div class="primary-button-wrapper mb-4">
-                        <router-link :to="`/games/${game.id}`">Play!</router-link>
+                        <router-link :to="`/games/${game.id}`"><a class="bg-secondary py-2 px-4 rounded">Play!</a></router-link>
                     </div>
                 </div>
             </div>
