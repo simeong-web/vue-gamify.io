@@ -1,20 +1,20 @@
 <template>
-    <div id="popular" class="container xl mx-auto my-6">
+    <div id="popular" class="container xl mx-auto my-6 px-2 sm:px-0">
         <div class="my-6 flex justify-center">
             <h2 class="text-3xl text-default">Game Your Way!</h2>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-12">
             <div class="landing-card">
-                <a href="/"><img src="../../public/placeholder-1.jpg" alt="game-card"></a>
+                <router-link to="/"><img src="../../public/placeholder-1.jpg" alt="game-card" class="min-w-full"></router-link>
             </div>
             <div class="landing-card">
-                <a href="/"><img src="../../public/placeholder-1.jpg" alt="game-card"></a>
+                <router-link to="/"><img src="../../public/placeholder-1.jpg" alt="game-card" class="min-w-full"></router-link>
             </div>
             <div class="landing-card">
-                <a href="/"><img src="../../public/placeholder-1.jpg" alt="game-card"></a>
+                <router-link to="/"><img src="../../public/placeholder-1.jpg" alt="game-card" class="min-w-full"></router-link>
             </div>
             <div class="landing-card">
-                <a href="/"><img  src="../../public/placeholder-1.jpg" alt="game-card"></a>
+                <router-link to="/"><img src="../../public/placeholder-1.jpg" alt="game-card" class="min-w-full"></router-link>
             </div>
         </div>
         <div class="site-section-heading">
@@ -22,7 +22,7 @@
         </div>
         <div class="popular-card-wrapper grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-2">
             <div class="primary-card text-default" v-for="game in games" :key="`${game.id}`">
-                <a href="/"><img :src="`${game.src}`" alt="game-card" class="max-w-full"></a>
+                <router-link :to="`/game/${game.id}`"><img :src="`${game.src}`" alt="game-card" class="min-w-full"></router-link>
                 <div class="primary-card-content">
                     <h3 class="primary-game-title mt-3">{{ game.title }}</h3>
                     <div class="primary-game-stats mb-5 flex justify-between">

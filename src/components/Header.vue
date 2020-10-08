@@ -1,5 +1,5 @@
 <template>
-    <header class="mx-auto py-2 container xl flex justify-between">
+    <header class="px-2 sm:px-0 mx-auto py-2 container xl flex justify-between">
         <div class="flex">
             <div class="max-w-xs bg-default-dark"></div>
             <div class="site-header-title flex ml-2 items-center">

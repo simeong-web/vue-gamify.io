@@ -1,5 +1,5 @@
 <template>
-    <footer class="max-w-4xl text-sm py-12 pb-4 block lg:flex justify-between mx-auto">
+    <footer class="px-2 sm:px-0 max-w-4xl text-sm py-12 pb-4 block lg:flex justify-between mx-auto container">
         <div class="footer-company max-w-sm">
             <div class="mb-4 text-xl footer-company-logo flex">
                 <h4 class="text-default">Gamefy</h4>

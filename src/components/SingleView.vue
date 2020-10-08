@@ -1,16 +1,18 @@
 <template>
-    <div id="single-view">
-        <div class="single-view-navigation container flex justify-between mx-auto">
+    <div id="single-view" class="px-2 sm:px-0">
+        <div class="single-view-navigation container flex justify-between mx-auto my-6">
             <div class="single-view-button-wrapper">
-                <a href="/" class="button-primary return">Back</a>
+                <router-link to="/"><a class="rounded bg-default text-primary px-2 py-2">Back</a></router-link>
             </div>
             <div class="single-view-button-wrapper">
-                <a href="#" class="button-primary next">Next</a>
+                <router-link to="/"><a class="rounded bg-default text-primary px-2 py-2">Next</a></router-link>
             </div>
         </div>
-        <section class="single-view-section container mx-auto">
+        <section class="single-view-section container mx-auto" :games="games">
             <div class="single-view-wrapper">
-                <img :src="`${game.src}`" alt="game-player">
+                <div class="image-wrapper">
+                    <img :src="`${game.src}`" alt="game-card" class="min-w-full">
+                </div>
                 <div class="single-view-content flex justify-between">
                     <h2 class="single-view-title">{{ game.title }}</h2>
                     <h3 class="single-view-stats">
@@ -24,8 +26,8 @@
                     <span>{{ game.rating  }}</span>
                 </div>
             </div>
-            <div class="primary-button-wrapper">
-                <a class="button-primary single-more">View More</a>
+            <div class="primary-button-wrapper text-primary mt-4">
+                <router-link to="/"><a class="rounded text-primary bg-default px-4 py-2">View More</a></router-link>
             </div>
         </section>
     </div>
