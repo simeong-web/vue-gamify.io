@@ -10,11 +10,11 @@
         </div>
         <section class="single-view-section container mx-auto" :games="games">
             <div class="single-view-wrapper">
-                <div class="image-wrapper">
-                    <img :src="`${game.src}`" alt="game-card" class="min-w-full">
+                <div class="image-wrapper mb-6">
+                    <img src="../../public/placeholder-1.jpg" alt="game-card" class="min-w-full">
                 </div>
                 <div class="single-view-content flex justify-between">
-                    <h2 class="single-view-title">{{ game.title }}</h2>
+                    <h2 class="single-view-title text-2xl">{{ game.title }}</h2>
                     <h3 class="single-view-stats">
                         <span class="likes">{{ game.likes }}</span>k likes
                         /
@@ -23,10 +23,10 @@
                 </div>
                 <div class="single-view-details flex justify-between">
                     <p class="single-view-description">Join this one of a kind adventure with us, where you will explore the beautiful world of Warcraft! This is a vast...</p>
-                    <span>{{ game.rating  }}</span>
+                    <span class="text-secondary-light">{{ game.rating  }}</span>
                 </div>
             </div>
-            <div class="primary-button-wrapper text-primary mt-4">
+            <div class="primary-button-wrapper text-primary mt-8">
                 <router-link to="/"><a class="rounded text-primary bg-default px-4 py-2">View More</a></router-link>
             </div>
         </section>
